@@ -81,6 +81,24 @@
                   </span>
             <span class="hide-menu">Identification des Besoins</span>
           </a>
+          <ul aria-expanded="false" class="collapse first-level">
+            <li class="sidebar-item">
+              <a [routerLink]="['/listebesoin']" class="sidebar-link">
+                <div class="round-16 d-flex align-items-center justify-content-center">
+                  <i class="ti ti-circle"></i>
+                </div>
+                <span class="hide-menu">Besoin</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a [routerLink]="['/listeprofil']" class="sidebar-link">
+                <div class="round-16 d-flex align-items-center justify-content-center">
+                  <i class="ti ti-circle"></i>
+                </div>
+                <span class="hide-menu">Profil</span>
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="sidebar-item">
           <a class="sidebar-link"  routerLink="/home"   routerLinkActive="active"  aria-expanded="false">
