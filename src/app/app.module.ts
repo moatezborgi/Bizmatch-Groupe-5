@@ -14,6 +14,15 @@ import { ModifierDesBesoinComponent } from './IdentificationBesoin/Besoin/modifi
 import { AjoutProfilComponent } from './IdentificationBesoin/Profil/ajout-profil/ajout-profil.component';
 import { ListeProfilComponent } from './IdentificationBesoin/Profil/liste-profil/liste-profil.component';
 import { ModifierProfilComponent } from './IdentificationBesoin/Profil/modifier-profil/modifier-profil.component';
+import { ListeStrategicPlanComponent } from './DeveloppementBuisness/StrategicPlan/liste-strategic-plan/liste-strategic-plan.component';
+import { ModifierStrategicPlanComponent } from './DeveloppementBuisness/StrategicPlan/modifier-strategic-plan/modifier-strategic-plan.component';
+import { AjouterStrategicPlanComponent } from './DeveloppementBuisness/StrategicPlan/ajouter-strategic-plan/ajouter-strategic-plan.component';
+import { AjouterProjectComponent } from './DeveloppementBuisness/Project/ajouter-project/ajouter-project.component';
+import { ModifierProjectComponent } from './DeveloppementBuisness/Project/modifier-project/modifier-project.component';
+import { ListeProjectComponent } from './DeveloppementBuisness/Project/liste-project/liste-project.component';
+import { ListeopportunityComponent } from './DeveloppementBuisness/Opportunity/listeopportunity/listeopportunity.component';
+import { AjouteropportunityComponent } from './DeveloppementBuisness/Opportunity/ajouteropportunity/ajouteropportunity.component';
+import { ModifieropportunityComponent } from './DeveloppementBuisness/Opportunity/modifieropportunity/modifieropportunity.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +35,16 @@ import { ModifierProfilComponent } from './IdentificationBesoin/Profil/modifier-
     ModifierDesBesoinComponent,
     AjoutProfilComponent,
     ListeProfilComponent,
-    ModifierProfilComponent
+    ModifierProfilComponent,
+    ListeStrategicPlanComponent,
+    ModifierStrategicPlanComponent,
+    AjouterStrategicPlanComponent,
+    AjouterProjectComponent,
+    ModifierProjectComponent,
+    ListeProjectComponent,
+    ListeopportunityComponent,
+    AjouteropportunityComponent,
+    ModifieropportunityComponent
   ],
   imports: [
     HttpClientModule,
