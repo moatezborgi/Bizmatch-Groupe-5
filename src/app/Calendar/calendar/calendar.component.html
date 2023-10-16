@@ -1,0 +1,40 @@
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+  <div class="body-wrapper">
+    <div class="container-fluid">
+
+      <div class="col-lg-20 d-flex align-items-strech">
+        <div class="card w-100">
+          <div class="card-body">
+            <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+              <div class="mb-3 mb-sm-0">
+                <h5 class="card-title fw-semibold">Calendar</h5>
+              </div>
+              <div class="col-sm-4 col-8 text-end m-b-30">
+                <a href="#" class="btn btn-primary btn-rounded" data-bs-toggle="modal" data-bs-target="#add_event" (click)="addev()" ><i class="fa fa-plus"></i> Add Event</a>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="col-auto text-end float-end ms-auto download-grp" >
+                    <a href="javascript:;" class=" me-2"  (click)="openPDF()"><img src="assets/images/icons/pdf-icon-01.svg" alt=""></a>
+                    <a href="javascript:;" class=" me-2"><img src="assets/images/icons/pdf-icon-02.svg" alt=""></a>
+                    <a href="javascript:;" class=" me-2"><img src="assets/images/icons/pdf-icon-03.svg" alt=""></a>
+                    <a href="javascript:;"><img src="assets/images/icons/pdf-icon-04.svg" alt=""></a>
+                  </div>
+                  <table class="table table-hover datatable dt-responsive nowrap">
+                    <div id="calendar" class="container" >
+                      <full-calendar [options]="calendarOptions" ></full-calendar>
+                    </div>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

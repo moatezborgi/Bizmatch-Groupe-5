@@ -1,0 +1,76 @@
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+  <div class="body-wrapper">
+    <div class="container-fluid">
+
+      <div class="col-lg-8 d-flex align-items-strech">
+        <div class="card w-100">
+          <div class="card-body">
+            <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+              <div class="mb-3 mb-sm-0">
+                <h5 class="card-title fw-semibold">Add Reunion</h5>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div class="card-body">
+                  <form #reunionForm="ngForm">
+                    <div class="mb-3">
+                      <label class="form-label">Entreprise</label>
+                      <input type="email" [(ngModel)]="Reunion.idEntreprise" class="form-control" name="idEntreprise" aria-describedby="emailHelp" >
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Participants</label>
+                      <select  [(ngModel)]="Reunion.idParticipants"  class="form-control select" name="idParticipants" multiple size="3">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label>Date <span class="login-danger">*</span></label>
+                      <input name="dateTime" [(ngModel)]="Reunion.dateTime" class="form-control" type="datetime-local" >
+                    </div>
+                    <div class="mb-3">
+                      <label>Status:<span class="login-danger">*</span></label>
+                        <select class="form-control select" name="reunionStatus" [(ngModel)]="Reunion.reunionStatus" (change)="Change($event)" >
+                          <option *ngFor="let type of types" [value]="type" [selected]="selectedType === type">{{type}}</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                      <label>Reason:<span class="login-danger">*</span></label>
+                      <textarea name="meetingLink" ngModel class="form-control" type="text" [(ngModel)]="Reunion.meetingLink" ></textarea>
+                    </div>
+                    <button routerLink="" type="submit" class="btn btn-primary" (click)="assignreunion(reunionForm.value)">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--                      <label for="exampleInputEmail1" class="form-label">Object</label>-->
+<!--                      <input type="text" class="form-control">-->
+<!--                    <div class="mb-3">-->
+<!--                      <label for="exampleInputEmail1" class="form-label">Description</label>-->
+<!--                      <div class="control-section">-->
+<!--                        <ejs-richtexteditor id='defaultRTE'>-->
+<!--                        </ejs-richtexteditor>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                      <label for="exampleInputEmail1" class="form-label">Project</label>-->
+<!--                      <select class="form-control select" name="participants">-->
+<!--                        <option >Project1</option>-->
+<!--                        <option >Project2</option>-->
+<!--                        <option >Project3</option>-->
+<!--                      </select>                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                      <label for="exampleInputEmail1" class="form-label">Status</label>-->
+<!--                      <input type="password" class="form-control" disabled>-->
+<!--                    </div>-->

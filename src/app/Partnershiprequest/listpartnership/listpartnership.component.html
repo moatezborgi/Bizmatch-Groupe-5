@@ -1,0 +1,88 @@
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+  <div class="body-wrapper">
+    <div class="container-fluid">
+
+      <div class="col-lg-20 d-flex align-items-strech">
+        <div class="card w-100">
+          <div class="card-body">
+            <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+              <div class="mb-3 mb-sm-0">
+                <tr>
+                <th><h5 class="card-title fw-semibold">Partnership List</h5></th>
+                <th>&nbsp;</th>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <br>
+                <th>
+                  <div class="doctor-search-blk">
+                    <div class="top-nav-search table-search-blk">
+                      <form>
+                        <div class="input-group">
+                          <input type="text" class="form-control icon-search" placeholder="Search">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </th>
+                </tr>
+              </div>
+              <div>
+                <Button [routerLink]="['/addpartnership']" class="btn btn-primary">Add Partnership Request</Button>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div class="card-body">
+                  <table class="table table-hover datatable dt-responsive nowrap">
+                    <thead>
+
+                    <tr>
+                      <th scope="col">Entreprise SerialNumber</th>
+                      <th scope="col">Partenaire SerialNumber</th>
+                      <th scope="col">Partner Type</th>
+                      <th scope="col">Object</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                   </thead>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-toggle card-drop" data-bs-toggle="dropdown" aria-expanded="true">
+                            <i class="mdi mdi-dots-horizontal font-size-18"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item"><i class="mdi mdi-pencil font-size-16 text-success me-1"></i>Modifier</a></li>
+                            <li><a class="dropdown-item" data-bs-target="#add_event" (click)="addev()"><i class="mdi mdi-pencil font-size-16 text-success me-1"></i>Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <pagination-controls></pagination-controls>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<style>.icon-search {
+  background-image: url('assets/images/icons/search-normal.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-right: 40px; /* Ajustez la valeur en fonction de la taille de votre icône */
+  padding-left: 22px; /* Ajustez la valeur en fonction de la taille de votre icône */
+
+}
+</style>
