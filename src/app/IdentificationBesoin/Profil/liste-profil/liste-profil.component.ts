@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {BesoinService} from "../../../Service/IdentificationBesoin/besoin.service";
 import {ProfilService} from "../../../Service/IdentificationBesoin/profil.service";
 
 @Component({
@@ -9,6 +8,7 @@ import {ProfilService} from "../../../Service/IdentificationBesoin/profil.servic
 })
 export class ListeProfilComponent implements OnInit{
   listeProfil: any;
+
 
   ngOnInit(): void {
     this.profilService.afficherToutProfilParEntreprise().subscribe(

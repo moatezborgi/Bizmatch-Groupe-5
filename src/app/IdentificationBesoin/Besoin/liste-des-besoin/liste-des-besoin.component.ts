@@ -8,8 +8,7 @@ import {BesoinService} from "../../../Service/IdentificationBesoin/besoin.servic
 })
 export class ListeDesBesoinComponent implements OnInit{
    listeBesoin: any;
-
-  ngOnInit(): void {
+      ngOnInit(): void {
     this.besoinService.afficherToutBesoinParEntreprise().subscribe(
       (data:any)=>{
         this.listeBesoin=data;

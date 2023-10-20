@@ -23,6 +23,11 @@ import { ListeProjectComponent } from './DeveloppementBuisness/Project/liste-pro
 import { ListeopportunityComponent } from './DeveloppementBuisness/Opportunity/listeopportunity/listeopportunity.component';
 import { AjouteropportunityComponent } from './DeveloppementBuisness/Opportunity/ajouteropportunity/ajouteropportunity.component';
 import { ModifieropportunityComponent } from './DeveloppementBuisness/Opportunity/modifieropportunity/modifieropportunity.component';
+import {CarouselModule} from "@marcreichel/angular-carousel";
+import {OwlCarousel, OwlModule} from "ngx-owl-carousel";
+import {SlickCarouselModule} from "ngx-slick-carousel";
+import {DragScrollModule} from "ngx-drag-scroll";
+
 
 @NgModule({
   declarations: [
@@ -50,7 +55,10 @@ import { ModifieropportunityComponent } from './DeveloppementBuisness/Opportunit
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CarouselModule,
+    SlickCarouselModule,
+    DragScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
