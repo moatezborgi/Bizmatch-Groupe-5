@@ -9,7 +9,8 @@ import {OpportunityService} from "../../../Service/DeveloppementBuisness/opportu
 })
 export class ListeopportunityComponent implements OnInit{
   listeOpportunity: any;
-
+  itemsPerPage = 10;
+  currentPage = 1;
   ngOnInit(): void {
     this.opportunityService.afficherToutOpportunityParEntreprise().subscribe(
       (data:any)=>{

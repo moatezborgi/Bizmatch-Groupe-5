@@ -29,6 +29,10 @@ import {
 import {
   ModifieropportunityComponent
 } from "./DeveloppementBuisness/Opportunity/modifieropportunity/modifieropportunity.component";
+import {AddReunionComponent} from "./ReunionB2B/add-reunion/add-reunion.component";
+import {ListreunionComponent} from "./ReunionB2B/listreunion/listreunion.component";
+import {CalendarComponent} from "./Calendar/calendar/calendar.component";
+import {EditReunionComponent} from "./ReunionB2B/edit-reunion/edit-reunion.component";
 
 const routes: Routes = [
   {
@@ -90,8 +94,19 @@ const routes: Routes = [
   {
     path:'modifierstrategicplan/:id',
     component:ModifierStrategicPlanComponent
-  },
-
+  },{
+    path:"addreunion/:id",
+    component:AddReunionComponent
+  },{
+    path:"editreunion/:ide/:idr",
+    component:EditReunionComponent
+  },{
+    path:"listReunion/:role/:id",
+    component:ListreunionComponent
+  },{
+    path:"calendar/:role/:id",
+    component:CalendarComponent
+  }
   ];
 
 @NgModule({

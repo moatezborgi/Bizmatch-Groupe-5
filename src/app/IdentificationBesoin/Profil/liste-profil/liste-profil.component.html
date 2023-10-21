@@ -47,7 +47,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let i of listeProfil">
+          <tr *ngFor="let i of listeProfil | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
             <td>
               {{i.nomProfil}}
             </td>
@@ -79,6 +79,7 @@
           </tr>
           </tbody>
         </table>
+        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
       </div>
     </div>
   </div>

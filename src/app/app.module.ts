@@ -27,7 +27,16 @@ import {CarouselModule} from "@marcreichel/angular-carousel";
 import {OwlCarousel, OwlModule} from "ngx-owl-carousel";
 import {SlickCarouselModule} from "ngx-slick-carousel";
 import {DragScrollModule} from "ngx-drag-scroll";
-
+import { AddReunionComponent } from './ReunionB2B/add-reunion/add-reunion.component';
+import { ListreunionComponent } from './ReunionB2B/listreunion/listreunion.component';
+import {FullCalendarModule} from "@fullcalendar/angular";
+import {DisableControlDirective} from "./ReunionB2B/disable-control.directive";
+import {NgxPaginationModule, PaginationControlsComponent} from "ngx-pagination";
+import {RichTextEditorModule} from "@syncfusion/ej2-angular-richtexteditor";
+import {CommonModule, DatePipe} from "@angular/common";
+import { CalendarComponent } from './Calendar/calendar/calendar.component';
+import {ToastrModule} from "ngx-toastr";
+import {EditReunionComponent} from "./ReunionB2B/edit-reunion/edit-reunion.component";
 
 @NgModule({
   declarations: [
@@ -35,6 +44,9 @@ import {DragScrollModule} from "ngx-drag-scroll";
     HeaderComponent,
     LeftsidebarComponent,
     MainSharedComponenetComponent,
+    AddReunionComponent,
+    ListreunionComponent,
+    CalendarComponent,
     ListeDesBesoinComponent,
     AjoutDesBesoinComponent,
     ModifierDesBesoinComponent,
@@ -49,9 +61,13 @@ import {DragScrollModule} from "ngx-drag-scroll";
     ListeProjectComponent,
     ListeopportunityComponent,
     AjouteropportunityComponent,
-    ModifieropportunityComponent
+    ModifieropportunityComponent,
+    DisableControlDirective,
+    CalendarComponent,
+    EditReunionComponent
   ],
   imports: [
+    ToastrModule.forRoot(),
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
@@ -59,8 +75,17 @@ import {DragScrollModule} from "ngx-drag-scroll";
     CarouselModule,
     SlickCarouselModule,
     DragScrollModule,
+    FullCalendarModule,
+    BrowserModule,
+    AppRoutingModule,
+    FullCalendarModule,
+    RichTextEditorModule,
+    NgxPaginationModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

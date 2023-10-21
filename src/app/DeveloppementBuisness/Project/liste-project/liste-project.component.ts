@@ -9,6 +9,8 @@ import {ProjectService} from "../../../Service/DeveloppementBuisness/project.ser
 })
 export class ListeProjectComponent  implements OnInit{
   listeProjet: any;
+  itemsPerPage = 10;
+  currentPage = 1;
 
   ngOnInit(): void {
     this.projetService.afficherToutProjectParEntreprise().subscribe(

@@ -8,6 +8,8 @@ import {StrategicPlanService} from "../../../Service/DeveloppementBuisness/strat
 })
 export class ListeStrategicPlanComponent implements OnInit {
   listePlan: any;
+  itemsPerPage = 10;
+  currentPage = 1;
 
   ngOnInit(): void {
     this.strategicPlanService.afficherToutStrategicPlanParEntreprise().subscribe(

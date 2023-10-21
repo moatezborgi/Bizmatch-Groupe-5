@@ -46,7 +46,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let i of listePlan">
+          <tr *ngFor="let i of listePlan | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
             <td>
               <p class="mb-0 fw-normal fs-4">{{i.strategicPlanDescription}}</p>
             </td>
@@ -75,6 +75,7 @@
           </tr>
           </tbody>
         </table>
+        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
       </div>
     </div>
   </div>

@@ -31,7 +31,9 @@
 
     <div  class="px-4 py-3 border-bottom align-items-center">
       <h5 class="card-title fw-semibold mb-0 lh-sm">Liste Des Opportunites</h5>
-
+    </div>
+    <div class="m-lg-auto w-20 mb-8 form-control">
+      <input class="form-control" placeholder="Search here" type="text">
     </div>
     <div class="card-body p-4">
       <div class="table-responsive rounded-2 mb-4">
@@ -47,7 +49,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let i of listeOpportunity">
+          <tr *ngFor="let i of listeOpportunity | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
             <td>
               {{i.prospectEmail}}
             </td>
@@ -79,6 +81,7 @@
           </tr>
           </tbody>
         </table>
+        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
       </div>
     </div>
   </div>

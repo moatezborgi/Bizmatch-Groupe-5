@@ -48,9 +48,9 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let i of listeBesoin">
+          <tr *ngFor="let i of listeBesoin | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
             <td>
-               {{i.typeDeBesoin}}
+              {{i.typeDeBesoin}}
             </td>
             <td><p class="mb-0 fw-normal fs-4">{{i.responsableDuBesoin}}</p></td>
             <td>
@@ -83,41 +83,23 @@
           </tr>
           </tbody>
         </table>
+        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
       </div>
     </div>
   </div>
   <div class="slider">
-    <input type="radio" name="testimonial" id="t-1">
-    <input type="radio" name="testimonial" id="t-2">
-    <input type="radio" name="testimonial" id="t-3" checked>
-    <input type="radio" name="testimonial" id="t-4">
-    <input type="radio" name="testimonial" id="t-5">
+    <input *ngFor="let i of entreprises; let idx = index" type="radio" name="testimonial" [id]="'t-' + (idx + 1)">
     <div class="testimonials">
-      <label class="item" for="t-1">
-        <h1>
-          <img  src="/assets/images/logo/logo.png" alt="" class="img-fluid mb-n4">
-        </h1>
-      </label>
-      <label class="item" for="t-2">
-        <h1>2</h1>
-      </label>
-      <label class="item" for="t-3">
-        <h1>3</h1>
-      </label>
-      <label class="item" for="t-4">
-        <h1>4</h1>
-      </label>
-      <label class="item" for="t-5">
-        <h1>5</h1>
+      <label *ngFor="let i of entreprises; let idx = index" class="item" [for]="'t-' + (idx + 1)">
+        <h1>{{ i.nom_entreprise }}</h1>
+        <h1>{{ i.type_de_besoin }}</h1>
+        <h1>{{ i.ville_entreprise }}</h1>
       </label>
     </div>
     <br/>
     <div class="dots">
-      <label for="t-1"></label>
-      <label for="t-2"></label>
-      <label for="t-3"></label>
-      <label for="t-4"></label>
-      <label for="t-5"></label>
+      <label *ngFor="let i of entreprises; let idx = index" [for]="'t-' + (idx + 1)"></label>
     </div>
   </div>
+  <script src="/assets/js/xd.js"></script>
 </div>

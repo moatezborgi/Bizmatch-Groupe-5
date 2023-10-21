@@ -8,7 +8,8 @@ import {ProfilService} from "../../../Service/IdentificationBesoin/profil.servic
 })
 export class ListeProfilComponent implements OnInit{
   listeProfil: any;
-
+  itemsPerPage = 10;
+  currentPage = 1;
 
   ngOnInit(): void {
     this.profilService.afficherToutProfilParEntreprise().subscribe(
