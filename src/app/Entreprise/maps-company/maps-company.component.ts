@@ -20,7 +20,7 @@ export class MapsCompanyComponent implements  OnInit{
   private isMapScriptLoaded = false; // Flag to track if the Google Maps API script has been loaded
   private isMapInitialized = false; // Add a flag to track map initialization state
   private markers: any[] = []; // Store the markers in an array to keep track of them
-   apiKey = 'AIzaSyBJBHMvkC8D7H8C8o0OIvPmPakGsNn4Ix8';
+   apiKey = '';
   isLoading = false;
 
   constructor(private miseenrelationservice:MiseenrelationService,private dialog: MatDialog) {
