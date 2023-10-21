@@ -37,6 +37,7 @@ import {CommonModule, DatePipe} from "@angular/common";
 import { CalendarComponent } from './Calendar/calendar/calendar.component';
 import {ToastrModule} from "ngx-toastr";
 import {EditReunionComponent} from "./ReunionB2B/edit-reunion/edit-reunion.component";
+import { CustomSearchFilterPipe } from './Filters/custom-search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import {EditReunionComponent} from "./ReunionB2B/edit-reunion/edit-reunion.compo
     ModifieropportunityComponent,
     DisableControlDirective,
     CalendarComponent,
-    EditReunionComponent
+    EditReunionComponent,
+    CustomSearchFilterPipe
   ],
   imports: [
     ToastrModule.forRoot(),

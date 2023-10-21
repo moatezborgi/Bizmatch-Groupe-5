@@ -10,6 +10,7 @@ export class ListeProfilComponent implements OnInit{
   listeProfil: any;
   itemsPerPage = 10;
   currentPage = 1;
+  searchtext: any;
 
   ngOnInit(): void {
     this.profilService.afficherToutProfilParEntreprise().subscribe(

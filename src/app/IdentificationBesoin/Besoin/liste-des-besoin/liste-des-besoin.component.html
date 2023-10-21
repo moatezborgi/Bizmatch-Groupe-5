@@ -31,7 +31,10 @@
 
     <div  class="px-4 py-3 border-bottom align-items-center">
       <h5 class="card-title fw-semibold mb-0 lh-sm">Liste Des Besoins</h5>
-
+      <div class="position-relative w-100">
+        <input [(ngModel)]="searchtext" type="text" class="form-control-sm search-chat py-2 ps-5" id="text-srh" placeholder="Search">
+        <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y fs-6 text-dark ms-3"></i>
+      </div>
     </div>
     <div class="card-body p-4">
       <div class="table-responsive rounded-2 mb-4">
@@ -48,7 +51,7 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let i of listeBesoin | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+          <tr *ngFor="let i of listeBesoin |searchfilter:searchtext | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
             <td>
               {{i.typeDeBesoin}}
             </td>

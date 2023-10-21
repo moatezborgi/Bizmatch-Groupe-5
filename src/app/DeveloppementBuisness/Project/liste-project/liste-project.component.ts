@@ -11,6 +11,7 @@ export class ListeProjectComponent  implements OnInit{
   listeProjet: any;
   itemsPerPage = 10;
   currentPage = 1;
+  searchtext: any;
 
   ngOnInit(): void {
     this.projetService.afficherToutProjectParEntreprise().subscribe(

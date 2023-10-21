@@ -10,6 +10,7 @@ export class ListeStrategicPlanComponent implements OnInit {
   listePlan: any;
   itemsPerPage = 10;
   currentPage = 1;
+  searchtext: any;
 
   ngOnInit(): void {
     this.strategicPlanService.afficherToutStrategicPlanParEntreprise().subscribe(

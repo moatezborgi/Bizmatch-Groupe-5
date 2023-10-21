@@ -115,6 +115,7 @@ export class ListreunionComponent implements OnInit {
   }
 
 // ...
+  searchtext: any;
 
 
 

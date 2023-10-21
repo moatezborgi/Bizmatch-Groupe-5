@@ -11,6 +11,7 @@ export class ListeopportunityComponent implements OnInit{
   listeOpportunity: any;
   itemsPerPage = 10;
   currentPage = 1;
+  searchtext: any;
   ngOnInit(): void {
     this.opportunityService.afficherToutOpportunityParEntreprise().subscribe(
       (data:any)=>{

@@ -12,6 +12,7 @@ export class ListeDesBesoinComponent implements OnInit{
   entreprises: any;
   itemsPerPage = 10;
   currentPage = 1;
+  searchtext: any;
       ngOnInit(): void {
     // this.besoinService.afficherToutBesoinParEntreprise().subscribe(
     //   (data:any)=>{
