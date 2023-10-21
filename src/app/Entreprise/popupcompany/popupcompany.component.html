@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-body p-4">
+    <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+      <mat-icon class="close-icon" color="warn">close</mat-icon>
+    </button>
+    <h5 class="card-title fw-semibold">{{company.companyLegalName}}</h5>
+    <p class="card-subtitle mb-7 pb-8">{{company.domaine}}</p>
+    <div class="position-relative">
+      <table id="smptable" class="table table-bordered table-hover">
+        <tr>
+          <td>Matricule fiscal:</td>
+          <td>{{company.fiscalNumer}}</td>
+        </tr>
+        <tr>
+          <td>Domaine:</td>
+          <td>{{company.domaine}}</td>
+        </tr>
+        <tr>
+          <td>Site Web:</td>
+          <td>{{company.webSite}}</td>
+        </tr>
+        <tr>
+          <td>Chiffre d'affaire année précédente (MB):</td>
+          <td>{{company.chiffreaffairelastyear}}</td>
+        </tr>
+        <tr>
+          <td>Nombre d'employés:</td>
+          <td>{{company.employees}}</td>
+        </tr>
+        <tr>
+          <td>Adresse:</td>
+          <td>{{company.adresse}}</td>
+        </tr>
+        <tr>
+          <td>Contact Mail:</td>
+          <td>{{company.contactMail}}</td>
+        </tr>
+        <tr>
+          <td>Fix:</td>
+          <td>{{company.fixContact}}</td>
+        </tr>
+      </table>
+
+    </div>
+    <button class="btn btn-outline-primary w-100" (click)="seconnecter()">Se connecter</button>
+  </div>
+</div>
+

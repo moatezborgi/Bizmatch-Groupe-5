@@ -22,7 +22,7 @@
         </li>
 
         <li class="sidebar-item">
-          <a class="sidebar-link"   routerLink="/home"  routerLinkActive="active"   aria-expanded="false">
+          <a class="sidebar-link" routerLink="/HomeEntreprise"   routerLinkActive="active"   aria-expanded="false">
                   <span>
                     <i class="ti ti-home"></i>
                   </span>
@@ -33,14 +33,42 @@
           <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
           <span class="hide-menu">Apps</span>
         </li>
-
         <li class="sidebar-item">
-          <a class="sidebar-link"  routerLink="/home"   routerLinkActive="active" aria-expanded="false">
-                  <span>
-                    <i class="ti ti-relation-many-to-many"></i>
+          <a class="sidebar-link has-arrow active" href="#" aria-expanded="false">
+                  <span class="d-flex">
+                    <i class="ti ti-layout"></i>
                   </span>
             <span class="hide-menu">Mise en Relation</span>
           </a>
+          <ul aria-expanded="false" class="collapse first-level in">
+            <li class="sidebar-item">
+              <a   routerLink="/AddEntreprise"  routerLinkActive="active" class="sidebar-link">
+                <div class="round-16 d-flex align-items-center justify-content-center">
+                  <i class="ti ti-circle"></i>
+                </div>
+                <span class="hide-menu">Informations de l'entreprise</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a   routerLink="/ListCompany"  routerLinkActive="active" class="sidebar-link">
+                <div class="round-16 d-flex align-items-center justify-content-center">
+                  <i class="ti ti-circle"></i>
+                </div>
+                <span class="hide-menu">Carte des entreprises</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a   routerLink="/DemandeList"  routerLinkActive="active" class="sidebar-link">
+                <div class="round-16 d-flex align-items-center justify-content-center">
+                  <i class="ti ti-circle"></i>
+                </div>
+                <span class="hide-menu">Liste de mes connexions</span>
+              </a>
+            </li>
+
+
+
+          </ul>
         </li>
         <li class="sidebar-item">
           <a class="sidebar-link"  routerLink="/home"   routerLinkActive="active"   aria-expanded="false">

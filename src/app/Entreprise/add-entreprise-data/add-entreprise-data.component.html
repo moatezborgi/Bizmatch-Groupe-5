@@ -1,0 +1,134 @@
+<div class="card bg-light-info shadow-none position-relative overflow-hidden">
+  <div class="card-body px-4 py-3">
+    <div class="row align-items-center">
+      <div class="col-9">
+        <h4 class="fw-semibold mb-8">Informations de l'entreprise</h4>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a class="text-muted " routerLink="/home">Tableau de bord
+              </a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              Informations de l'entreprise
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col-3">
+        <div class="text-center mb-n5">
+          <img src="/assets/images/breadcrumb/ChatBc.png" alt="" class="img-fluid mb-n4" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <form [formGroup]="addForm" (ngSubmit)="submitForm(addForm.value)">
+
+<div class="col-lg-10">
+  <div class="card">
+    <div class="px-4 py-3 border-bottom">
+      <h5 class="card-title fw-semibold mb-0">Remplissez le information de l'entreprise</h5>
+    </div>
+    <div class="card-body p-4">
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Nom legal:</label>
+        <div class="col-sm-9">
+          <input [ngClass]="{ 'is-valid':(submitted || f['companyLegalName'].dirty) && !f['companyLegalName'].errors, 'is-invalid': (submitted || f['companyLegalName'].dirty) && f['companyLegalName'].errors }" formControlName="companyLegalName" type="text" class="form-control"  >
+          <div class="invalid-feedback" *ngIf="f['companyLegalName'].errors">
+            <span *ngIf="f['companyLegalName'].errors?.['required']">Le nom est obligatoire</span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">N°Fiscal</label>
+        <div class="col-sm-9">
+          <input [ngClass]="{ 'is-valid':(submitted || f['fiscalNumber'].dirty) && !f['fiscalNumber'].errors, 'is-invalid': (submitted || f['fiscalNumber'].dirty) && f['fiscalNumber'].errors }" formControlName="fiscalNumber" type="text" class="form-control"  >
+          <div class="invalid-feedback" *ngIf="f['fiscalNumber'].errors">
+            <span *ngIf="f['fiscalNumber'].errors?.['required']">N° fiscal est obligatoire</span>
+          </div>        </div>
+      </div>
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-9">
+          <div class="input-group border rounded-1">
+            <input [ngClass]="{ 'is-valid':(submitted || f['contactMail'].dirty) && !f['contactMail'].errors, 'is-invalid': (submitted || f['contactMail'].dirty) && f['contactMail'].errors }" formControlName="contactMail" type="text" class="form-control"  >
+            <div class="invalid-feedback" *ngIf="f['contactMail'].errors">
+              <span *ngIf="f['contactMail'].errors?.['required']">E-mail est obligatoire</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Domaine</label>
+        <div class="col-sm-9">
+          <input [ngClass]="{ 'is-valid':(submitted || f['domain'].dirty) && !f['domain'].errors, 'is-invalid': (submitted || f['domain'].dirty) && f['domain'].errors }" type="text" class="form-control" formControlName="domain" >
+          <div class="invalid-feedback" *ngIf="f['domain'].errors">
+            <span *ngIf="f['domain'].errors?.['required']">Saisissez le domaine de l'entreprise</span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Site web</label>
+        <div class="col-sm-9">
+          <input [ngClass]="{ 'is-valid':(submitted || f['webSite'].dirty) && !f['webSite'].errors, 'is-invalid': (submitted || f['webSite'].dirty) && f['webSite'].errors }" type="text" class="form-control" formControlName="webSite" >
+          <div class="invalid-feedback" *ngIf="f['webSite'].errors">
+            <span *ngIf="f['webSite'].errors?.['required']">Saisissez le site web de l'entreprise</span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Contact</label>
+        <div class="col-sm-9">
+          <input [ngClass]="{ 'is-valid':(submitted || f['fixContact'].dirty) && !f['fixContact'].errors, 'is-invalid': (submitted || f['fixContact'].dirty) && f['fixContact'].errors }" type="text" class="form-control" formControlName="fixContact" >
+          <div class="invalid-feedback" *ngIf="f['fixContact'].errors">
+            <span *ngIf="f['fixContact'].errors?.['required']">Saisissez un numéro de contact de l'entreprise</span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">CU année précédent</label>
+        <div class="col-sm-9">
+          <input [ngClass]="{ 'is-valid':(submitted || f['chiffreaffairelastyear'].dirty) && !f['chiffreaffairelastyear'].errors, 'is-invalid': (submitted || f['chiffreaffairelastyear'].dirty) && f['chiffreaffairelastyear'].errors }" type="text" class="form-control" formControlName="chiffreaffairelastyear" >
+          <div class="invalid-feedback" *ngIf="f['chiffreaffairelastyear'].errors">
+            <span *ngIf="f['chiffreaffairelastyear'].errors?.['required']">Saisissez de l'année précédent (MD)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Nombre d'employée</label>
+        <div class="col-sm-9">
+          <input [ngClass]="{ 'is-valid':(submitted || f['employees'].dirty) && !f['employees'].errors, 'is-invalid': (submitted || f['employees'].dirty) && f['employees'].errors }" type="text" class="form-control" formControlName="employees" >
+          <div class="invalid-feedback" *ngIf="f['employees'].errors">
+            <span *ngIf="f['employees'].errors?.['required']">Saisissez le nombre d'employées</span>
+          </div>
+        </div>
+      </div>
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Adresse</label>
+        <div class="col-sm-9">
+          <textarea class="form-control" formControlName="adresse"  #adresse type="text" placeholder=""></textarea>
+
+        </div>
+      </div>
+      <div class="mb-4 row align-items-center">
+        <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Localisation</label>
+        <div class="col-lg-9">
+          <div id="map" style="height: 400px;"></div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-9">
+          <button class="btn btn-primary" [hidden]="hidebouton">Ajouter</button>
+          <button class="btn btn-primary" [hidden]="hideboutonupdate" >Modifier</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+

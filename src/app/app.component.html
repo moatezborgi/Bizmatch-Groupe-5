@@ -1,1 +1,15 @@
-<app-main-shared-componenet></app-main-shared-componenet>
+<ng-container *ngIf="!(isLoginPage() || isSignUpPage())">
+  <app-main-shared-componenet [user]="user" ></app-main-shared-componenet>
+</ng-container>
+
+
+
+<ng-container *ngIf="isLoginPage()">
+  <app-sing-in></app-sing-in>
+</ng-container>
+
+
+
+<ng-container *ngIf="isSignUpPage()">
+  <app-createaccount></app-createaccount>
+</ng-container>
