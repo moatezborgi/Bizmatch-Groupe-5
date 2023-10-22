@@ -13,9 +13,10 @@ import {RoomServiceService} from "../Services/room-service.service";
 export class ChatModuleComponent implements OnInit ,AfterViewChecked{
 
    message: string = ''; // Initialize with an empty string
-   currentusername=localStorage.getItem("username");
+   currentusername=localStorage.getItem("emailadress");
+   currentuserlnom=localStorage.getItem("lname");
+   currentuserfnom=localStorage.getItem("fname");
    currentuserrole=localStorage.getItem("role");
-   currentusernom=localStorage.getItem("name");
    currentStaticUsername: string = 'yassine';
    chats: Chat[] = [];
    Messages: Messaggio[] = [];

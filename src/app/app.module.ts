@@ -13,6 +13,9 @@ import { EntrepriseDetailsComponent } from './entreprise-details/entreprise-deta
   import {WebSocketServiceService} from "./Services/web-socket-service.service";
   import {FormsModule} from "@angular/forms";
   import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { SignatureComponent } from './signature/signature.component';
+  import {AngularSignaturePadModule} from "@almothafar/angular-signature-pad";
+import { ContratComponent } from './contrat/contrat.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { EntrepriseDetailsComponent } from './entreprise-details/entreprise-deta
     MainSharedComponenetComponent,
     ChatModuleComponent,
     EntrepriseDetailsComponent,
+    SignatureComponent,
+    ContratComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularSignaturePadModule
   ],
   providers: [{
     provide: WebSocketServiceService,

@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="text-center">Signature Pad</h4>
+        </div>
+        <div class="card-body">
+          <signature-pad #signature [options]="signaturePadOptions" (drawStart)="drawStart($event)" (drawEnd)="drawComplete($event)"></signature-pad>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary" (click)="saveSignature()">Save</button>
+          <button class="btn btn-secondary" (click)="clearSignature()">Clear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
