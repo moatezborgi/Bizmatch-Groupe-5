@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-3 d-flex align-items-strech">
+
+      <div *ngFor="let e of evenement">
+        <div class="card w-100">
+          <div class="card-body p-lg-6">
+
+
+
+            <div class="item">
+              <div class="card overflow-hidden mb-lg-9">
+                <div class="position-relative">
+                  <img src="../assets/images/nft/3.jpg" class="img-fluid w-100" alt="1" />
+                  <div class="card-img-overlay">
+
+                    <div class="text-end">
+                      <span class="badge bg-light-dark rounded-pill fs-2">{{e.dateEvent}}</span>
+                    </div>
+
+
+                  </div>
+                </div>
+                <div class="p-9 text-start">
+                  <h6 class="ffw-semibold fs-4">{{e.nomEvent}}</h6>
+
+                  <div class="fs-3">{{e.typeEvent}}</div>
+
+                  <span class="text-dark fw-bold"> {{e.nbrePlaceDispo}} places dispo</span>
+                  <a href="javascript:void(0)" class="btn btn-primary w-100 mt-3"routerLink="/detailseventclient/{{e.idEvent}}">details</a>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script src="/src/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="/src/assets/libs/simplebar/dist/simplebar.min.js"></script>
+<script src="/src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- core files -->
+<script src="/src/assets/js/app.min.js"></script>
+<script src="/src/assets/js/app.init.js"></script>
+<script src="/src/assets/js/app-style-switcher.js"></script>
+<script src="/src/assets/js/sidebarmenu.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+<!-- current page js files -->
+<script src="/src/assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="/src/assets/js/dashboard3.js"></script>
+</body>
+
+<!-- Mirrored from demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/html/main/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Sep 2023 12:14:52 GMT -->
+</html>

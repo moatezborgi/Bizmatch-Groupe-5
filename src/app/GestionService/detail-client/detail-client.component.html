@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/html/main/eco-shop-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Sep 2023 12:16:24 GMT -->
+<head>
+  <!-- --------------------------------------------------- -->
+  <!-- Title -->
+  <!-- --------------------------------------------------- -->
+  <title>Mordenize</title>
+  <!-- --------------------------------------------------- -->
+  <!-- Required Meta Tag -->
+  <!-- --------------------------------------------------- -->
+
+  <!-- --------------------------------------------------- -->
+  <!-- Favicon -->
+  <!-- --------------------------------------------------- -->
+  <link rel="shortcut icon" type="image/png" href="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/favicon.ico" />
+  <!-- --------------------------------------------------- -->
+  <!-- Core Css -->
+  <!-- --------------------------------------------------- -->
+  <!-- Owl Carousel  -->
+  <link rel="stylesheet" href="/assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
+  <link  id="themeColors"  rel="stylesheet" href="/assets/css/style.min.css" />
+</head>
+<body>
+<!-- Preloader -->
+
+<!-- --------------------------------------------------- -->
+<!-- Body Wrapper -->
+<!-- --------------------------------------------------- -->
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+  <!-- --------------------------------------------------- -->
+  <!-- Sidebar -->
+  <!-- --------------------------------------------------- -->
+
+  <!-- --------------------------------------------------- -->
+  <!-- Main Wrapper -->
+  <!-- --------------------------------------------------- -->
+  <div class="body-wrapper">
+    <!-- --------------------------------------------------- -->
+    <!-- Header Start -->
+    <!-- --------------------------------------------------- -->
+
+    <!-- --------------------------------------------------- -->
+    <!-- Header End -->
+    <!-- --------------------------------------------------- -->
+    <div class="shop-detail">
+      <div class="card shadow-none border">
+        <div class="card-body p-2">
+          <div class="row">
+            <div class="col-lg-6">
+
+              <div class="item rounded overflow-hidden">
+                <img src="/assets/images/products/s3.jpg" alt="" class="img-fluid">
+              </div>
+
+
+
+            </div>
+
+            <div class="col-lg-6">
+              <div class="shop-content">
+
+                <div *ngIf="service.etatService=='nonDisponible'" >
+                  <span class="badge bg-danger text-success rounded-pill mb-3">{{service.etatService}}</span>
+                </div>
+                <div *ngIf="service.etatService=='disponible'" >
+                  <span class="badge bg-body-secondary text-success rounded-pill mb-3">{{service.etatService}}</span>
+                </div>
+
+                <h4 class="fw-semibold">Nom Service</h4>
+                <p class="mb-3"> {{service.nomService}}</p>
+                <h4 class="fw-semibold">description</h4>
+
+                <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab" tabindex="0">
+                  <h5 class="fs-5 fw-semibold mb-7">{{service.description}}</h5>
+
+
+                </div>
+                <div class="d-sm-flex align-items-center gap-3 pt-8 mb-7">
+
+                  <a href="javascript:void(0)" class="btn d-block btn-primary px-5 py-8 mb-2 mb-sm-0" (click)="addRevervation(service.idService)" >Reserver</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow-none border " >
+        <div class="card-body p-9">
+          <ul class="nav nav-pills user-profile-tab border-bottom" id="pills-tab" role="tablist">
+
+
+          </ul>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/simplebar/dist/simplebar.min.js"></script>
+<script src="../../dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ---------------------------------------------- -->
+<!-- core files -->
+<!-- ---------------------------------------------- -->
+<script src="../../dist/js/app.min.js"></script>
+<script src="../../dist/js/app.init.js"></script>
+<script src="../../dist/js/app-style-switcher.js"></script>
+<script src="../../dist/js/sidebarmenu.js"></script>
+
+<script src="../../dist/js/custom.js"></script>
+<script src="../../dist/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="../../dist/js/productDetail.js"></script>
+<!-- ---------------------------------------------- -->
+<!-- current page js files -->
+<!-- ---------------------------------------------- -->
+<script src="../../dist/js/apps/chat.js"></script>
+</body>
+
+<!-- Mirrored from demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/html/main/eco-shop-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Sep 2023 12:16:24 GMT -->
+</html>

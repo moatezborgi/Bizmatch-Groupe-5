@@ -1,0 +1,46 @@
+<form #f ="ngForm">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="note-title">
+        <label>nomEvent</label>
+        <input type="text"  name="nomEvent" ngModel class="form-control" minlength="25" placeholder="" #nomEvent='ngModel' />
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="note-title">
+        <label>nbrePlaceDispo</label>
+        <input type="number"  name="nbrePlaceDispo" ngModel  class="form-control" minlength="25" #nbrePlaceDispo='ngModel' />
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="note-title">
+        <label>dateEvent</label>
+        <input type="date" name="dateEvent" ngModel class="form-control" minlength="25" #dateEvent='ngModel' />
+      </div>
+    </div>
+
+
+    <div class="col-md-12">
+      <div class="note-description">
+        <label> description</label>
+        <textarea name="description" ngModel class="form-control" minlength="60"  rows="3" #description='ngModel' ></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="form-floating mb-3">
+
+    <select class="form-select col-md-3" id="floatingSelect"
+            name="typeEvent" ngModel  aria-label="Floating label select example"  #typeEvent='ngModel'>
+
+      <option value="1">séminaires</option>
+      <option value="2">conférences</option>
+
+    </select>
+    <label for="floatingSelect">TypeEvent</label>
+  </div>
+
+</form>
+<div class="modal-footer">
+  <button class="btn btn-danger" data-bs-dismiss="modal" routerLink="/ourevent">annuler </button>
+  <button id="btn-n-add" class="btn btn-primary" (click)="addEvnet(f.value)">save</button>
+</div>

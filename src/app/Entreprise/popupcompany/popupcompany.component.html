@@ -1,0 +1,104 @@
+<div class="card">
+  <div class="card-body p-4">
+    <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+      <mat-icon class="close-icon" color="warn">close</mat-icon>
+    </button>
+    <h5 class="card-title fw-semibold">{{company.companyLegalName}}</h5>
+    <p class="card-subtitle mb-7 pb-8">{{company.domaine}}</p>
+    <div class="position-relative">
+      <table id="smptable" class="table table-bordered table-hover">
+        <tr>
+          <td>Matricule fiscal:</td>
+          <td>{{company.fiscalNumer}}</td>
+        </tr>
+        <tr>
+          <td>Domaine:</td>
+          <td>{{company.domaine}}</td>
+        </tr>
+        <tr>
+          <td>Site Web:</td>
+          <td>{{company.webSite}}</td>
+        </tr>
+        <tr>
+          <td>Chiffre d'affaire année précédente (MB):</td>
+          <td>{{company.chiffreaffairelastyear}}</td>
+        </tr>
+        <tr>
+          <td>Nombre d'employés:</td>
+          <td>{{company.employees}}</td>
+        </tr>
+        <tr>
+          <td>Adresse:</td>
+          <td>{{company.adresse}}</td>
+        </tr>
+        <tr>
+          <td>Contact Mail:</td>
+          <td>{{company.contactMail}}</td>
+        </tr>
+        <tr>
+          <td>Fix:</td>
+          <td>{{company.fixContact}}</td>
+        </tr>
+      </table>
+
+    </div>
+    <button class="btn btn-outline-primary w-100" (click)="seconnecter()">Se connecter</button>
+    <button class="btn btn-outline-primary w-100" (click)="Signer()">Signer</button>
+
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table align-middle mb-0 text-nowrap">
+    <thead>
+    <tr>
+      <th>Description</th>
+      <th>Secteur</th>
+      <th>Rentabilité</th>
+      <th>Taille de marché</th>
+      <th>Date de lancement</th>
+      <th>Date de publication</th>
+       <th>État</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let marche of marcheList">
+      <td class="ps-0">
+        <div class="d-flex align-items-center gap-3">
+          <div>
+            <h6 class="mb-0 fw-semibold">{{marche.descMarche}}</h6>
+          </div>
+        </div>
+      </td>
+      <td class="ps-0">
+        <span>{{marche.secteur}}</span>
+      </td>
+      <td class="ps-0">
+        <span>{{marche.rentabilite}}</span>
+      </td>
+      <td class="ps-0">
+        <span>{{marche.tailledemarche}}</span>
+      </td>
+      <td class="ps-0">
+        <span>{{marche.datelancement}}</span>
+      </td>
+      <td class="ps-0">
+        <span>{{marche.datePublication}}</span>
+      </td>
+
+      <td class="text-end ps-0">
+        <ng-container *ngIf="!marche.statusmarche">
+          <span class="badge bg-light-warning text-warning rounded-pill">
+            <span class="round-8 bg-warning rounded-circle d-inline-block me-1"></span>En cours
+          </span>
+        </ng-container>
+        <ng-container *ngIf="marche.statusmarche">
+          <span class="badge bg-light-warning text-warning rounded-pill">
+            <span class="round-8 bg-warning rounded-circle d-inline-block me-1"></span>Fermer
+          </span>
+        </ng-container>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

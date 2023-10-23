@@ -1,0 +1,97 @@
+<div class="card bg-light-info shadow-none position-relative overflow-hidden">
+  <div class="card-body px-4 py-3">
+    <div class="row align-items-center">
+      <div class="col-9">
+        <h4 class="fw-semibold mb-8">Ouverture d'un nouveau marche</h4>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a class="text-muted " routerLink="/home">Tableau de bord
+              </a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              Ouverture d'un nouveau marche
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col-3">
+        <div class="text-center mb-n5">
+          <img src="/assets/images/breadcrumb/ChatBc.png" alt="" class="img-fluid mb-n4" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="submitForm(addForm.value)">
+  <div class="col-lg-10">
+    <div class="card">
+      <div class="px-4 py-3 border-bottom">
+        <h5 class="card-title fw-semibold mb-0">Remplissez les informations</h5>
+      </div>
+      <div class="card-body p-4">
+        <div class="mb-4 row align-items-center">
+          <label for="" class="form-label fw-semibold col-sm-3 col-form-label">Description:</label>
+          <div class="col-sm-9">
+            <input [ngClass]="{ 'is-valid':(submitted || f['descMarche'].dirty) && !f['descMarche'].errors, 'is-invalid': (submitted || f['descMarche'].dirty) && f['descMarche'].errors }" formControlName="descMarche" type="text" class="form-control"  >
+            <div class="invalid-feedback" *ngIf="f['descMarche'].errors">
+              <span *ngIf="f['descMarche'].errors?.['required']">Description est obligatoire</span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 row align-items-center">
+          <label for="" class="form-label fw-semibold col-sm-3 col-form-label">secteur:</label>
+          <div class="col-sm-9">
+            <input [ngClass]="{ 'is-valid':(submitted || f['secteur'].dirty) && !f['secteur'].errors, 'is-invalid': (submitted || f['secteur'].dirty) && f['secteur'].errors }" formControlName="secteur" type="text" class="form-control"  >
+            <div class="invalid-feedback" *ngIf="f['secteur'].errors">
+              <span *ngIf="f['secteur'].errors?.['required']">secteur est obligatoire</span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 row align-items-center">
+          <label for="" class="form-label fw-semibold col-sm-3 col-form-label">rentabilite:</label>
+          <div class="col-sm-9">
+            <input [ngClass]="{ 'is-valid':(submitted || f['rentabilite'].dirty) && !f['rentabilite'].errors, 'is-invalid': (submitted || f['rentabilite'].dirty) && f['rentabilite'].errors }" formControlName="rentabilite" type="text" class="form-control"  >
+            <div class="invalid-feedback" *ngIf="f['rentabilite'].errors">
+              <span *ngIf="f['rentabilite'].errors?.['required']">rentabilite est obligatoire</span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 row align-items-center">
+          <label for="" class="form-label fw-semibold col-sm-3 col-form-label">taille de marche:</label>
+          <div class="col-sm-9">
+            <input [ngClass]="{ 'is-valid':(submitted || f['tailledemarche'].dirty) && !f['tailledemarche'].errors, 'is-invalid': (submitted || f['tailledemarche'].dirty) && f['tailledemarche'].errors }" formControlName="tailledemarche" type="text" class="form-control"  >
+            <div class="invalid-feedback" *ngIf="f['tailledemarche'].errors">
+              <span *ngIf="f['tailledemarche'].errors?.['required']">taille de marche est obligatoire</span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 row align-items-center">
+          <label for="" class="form-label fw-semibold col-sm-3 col-form-label">duree de marche:</label>
+          <div class="col-sm-9">
+            <input [ngClass]="{ 'is-valid':(submitted || f['duree'].dirty) && !f['duree'].errors, 'is-invalid': (submitted || f['duree'].dirty) && f['duree'].errors }" formControlName="duree" type="text" class="form-control"  >
+            <div class="invalid-feedback" *ngIf="f['duree'].errors">
+              <span *ngIf="f['duree'].errors?.['required']">duree de marche est obligatoire</span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 row align-items-center">
+          <label for="" class="form-label fw-semibold col-sm-3 col-form-label">date de lancement de marche:</label>
+          <div class="col-sm-9">
+            <input [ngClass]="{ 'is-valid':(submitted || f['datelancement'].dirty) && !f['datelancement'].errors, 'is-invalid': (submitted || f['datelancement'].dirty) && f['datelancement'].errors }" formControlName="datelancement" type="date" class="form-control"  >
+            <div class="invalid-feedback" *ngIf="f['datelancement'].errors">
+              <span *ngIf="f['datelancement'].errors?.['required']">datelancement de marche est obligatoire</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-9">
+            <button class="btn btn-primary" >Ajouter</button>
+
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+</form>
