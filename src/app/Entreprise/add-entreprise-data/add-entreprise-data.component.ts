@@ -13,7 +13,7 @@ declare const google: any;
 })
 export class AddEntrepriseDataComponent implements OnInit{
   submitted = false;
-  apiKey = 'AIzaSyBJBHMvkC8D7H8C8o0OIvPmPakGsNn4Ix8';
+  apiKey = '';
   map: any;
   marker!: any;
   adresseStruct:any;
